@@ -1,6 +1,4 @@
-
-
-//Quiz Questions
+//Quiz Questions, define
 var questions = [
   {
     title: "Commonly used date type DO NOT include:",
@@ -12,19 +10,19 @@ var questions = [
     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
     answer: "parentheses",
   },
-  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
-  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
-  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
-  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
+  {
+    title: "Arrays in Javascript can be used to store ___.",
+    choices: [
+      "Numbers and Strings",
+      "Other Arrays",
+      "Booleans",
+      "All of the above",
+    ],
+    answer: "All of the above",
+  },
 ];
 
-
-function showQuestion(q){
-  var titleDiv =document.getElementById('#title');
-  titleDiv.textContent = q.title;
-}
-
-//Elements needed
+//list of variables
 var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
 var questionsEl = document.querySelector("#questions");
@@ -34,4 +32,22 @@ var timerEl = document.querySelector("#time");
 var currentQuestionIndex = 0;
 var timerId;
 
+function showQuestion(q) {
+  document.getElementById("#title").innerHTML;
+}
 
+function startGame(event) {
+  event.preventDefault();
+  console.log("startGame");
+}
+
+startBtn.addEventListener("click", startGame);
+//click event to check answer to question, move onto the next question
+document.getElementById("questions");
+
+//timer function
+function clock() {
+  var timerEl = setInterval();
+}
+
+//last page
