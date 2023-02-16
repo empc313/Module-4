@@ -29,9 +29,8 @@ var questionsEl = document.querySelector("#questions");
 var choicesEl = document.querySelector("#choices");
 var initialsEl = document.querySelector("#initials");
 var timerEl = document.querySelector("#time");
-var currentQuestion= 0;
+var currentQuestion = 0;
 var timerId;
- 
 
 //show question
 function showQuestion(q) {
@@ -41,28 +40,36 @@ function showQuestion(q) {
 function startGame(event) {
   event.preventDefault();
   console.log("startGame");
+  startBtn.currentQuestion.add('hide');
+  questions.currentQuestion.remove('hide');
+  nextQuestion();
+  //title.setAttribute('class', 'hide');
 }
 startBtn.addEventListener("click", startGame);
 document.getElementById("questions");
 
 //click event to check answer to question, move onto the next question
 //move to next question in the array
-function nextQuestion(event){
+function nextQuestion(event) {
   questionsEl.textContent = questions[currentQuestion].title;
-  for (var i = 0; i< questions[currentQuestion].choices.length; i++){
+  for (var i = 0; i < questions[currentQuestion].choices.length; i++) {
     //checks answer that is choosen right or wrong
-    if (event.target.textContent ===  questions[currentQuestion].correct){
-      console.log('question')
+    if (event.target.textContent === questions[currentQuestion].correct) {
+      console.log("nextQuestion");
     }
   }
 }
 
-
 //timer function
 function clock() {
-  var timerEl = setInterval();
+  var timerInterval = setInterval(function () {
+    countDown--;
+    timerEl.textContent = "Time Left:" + countDown;
+    //if ( count is 0 end game)
+  });
 }
 
 //function for end of game
 
-//How do make the highscore page and the game page different
+//How do I store the initials and the highscores at the end of the game
+// (localStorage.getItem(SCORES))
