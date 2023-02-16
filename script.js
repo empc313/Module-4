@@ -4,6 +4,10 @@ var startBtn = document.querySelector("#start");
 var questionsEl = document.querySelector("#questions");
 var choicesEl = document.querySelector("#choices");
 var initialsEl = document.querySelector("#initials");
+var timerEl = document.querySelector("#time");
+var currentQuestionIndex = 0;
+var time = question.length * 20;
+var timerId;
 
 //Quiz Questions
 var questions = [
@@ -18,14 +22,36 @@ var questions = [
     answer: "parentheses",
   },
   { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
+  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
+  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
+  { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
 ];
 
 //Functions of the quiz
-function startQuiz() {
-  var startScreenEl = document.getElementById("start-quiz");
-  startScreenEl.setAttribute("class", "hide");
-  questionsEl.removeAttribute("class");
-  timerId = setInterval(clockTick, 100);
-  timerEl.textcontent = time;
-  getQuestion();
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+function showQuestions(questions, quizContainer){
+var output = [];
+var answer;
+for(var i=0; i<questions.length; i++){
+  answers = [];
+  
+  for (alerts[i].answers) 
+  {answers.push(
+      '<label>'
+        + '<input type="button" name="question'+i+'" value="'+answer+'">'
+        + answer + ': '
+        + questions[i].answers[letter]
+      + '</label>'
+    );
+  }
+
+  function showResults(){
 }
+  showQuestions(questions);
+
+  submitButton.onclick = function(){
+    showResults();
+  };
+}}}
+
+
