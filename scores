@@ -1,0 +1,4 @@
+//scores
+
+var showScores = JSON.parse();
+var scoreDisplay = document.querySelector();

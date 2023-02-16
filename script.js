@@ -25,13 +25,15 @@ var questions = [
 //list of variables
 var submitBtn = document.querySelector("#submit");
 var startBtn = document.querySelector("#start");
-var questionsEl = document.querySelector("#questions");
+var quizPage = document.querySelector("#questions");
 var choicesEl = document.querySelector("#choices");
 var initialsEl = document.querySelector("#initials");
 var timerEl = document.querySelector("#time");
+var startPage = document.querySelector("#quiz");
+var endPage = document.querySelector("end-quiz");
 var currentQuestion = 0;
 var timerId;
-
+var score = 0;
 //show question
 function showQuestion(q) {
   document.getElementById("#title").innerHTML;
@@ -40,9 +42,9 @@ function showQuestion(q) {
 function startGame(event) {
   event.preventDefault();
   console.log("startGame");
-  startBtn.currentQuestion.add('hide');
-  questions.currentQuestion.remove('hide');
-  nextQuestion();
+  startPage.classList.add("start");
+  quizPage.classList.remove("hide");
+  displayQuestion();
   //title.setAttribute('class', 'hide');
 }
 startBtn.addEventListener("click", startGame);
@@ -72,4 +74,13 @@ function clock() {
 //function for end of game
 
 //How do I store the initials and the highscores at the end of the game
-// (localStorage.getItem(SCORES))
+function saveScore(event) {
+  event.preventDefault();
+  var initialsEl = document.querySelector("#initials").value;
+  var savedScore = initials + ":" + score;
+  console.log(savedScore);
+  localStorage.getItem(highScores);
+  highScores[initials] = score;
+  localStorage.setItem(highScores, JSON.stringify(highScores));
+  document.querySelector("#initials-input").value = "";
+}
