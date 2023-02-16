@@ -29,9 +29,11 @@ var questionsEl = document.querySelector("#questions");
 var choicesEl = document.querySelector("#choices");
 var initialsEl = document.querySelector("#initials");
 var timerEl = document.querySelector("#time");
-var currentQuestionIndex = 0;
+var currentQuestion= 0;
 var timerId;
+ 
 
+//show question
 function showQuestion(q) {
   document.getElementById("#title").innerHTML;
 }
@@ -40,14 +42,27 @@ function startGame(event) {
   event.preventDefault();
   console.log("startGame");
 }
-
 startBtn.addEventListener("click", startGame);
-//click event to check answer to question, move onto the next question
 document.getElementById("questions");
+
+//click event to check answer to question, move onto the next question
+//move to next question in the array
+function nextQuestion(event){
+  questionsEl.textContent = questions[currentQuestion].title;
+  for (var i = 0; i< questions[currentQuestion].choices.length; i++){
+    //checks answer that is choosen right or wrong
+    if (event.target.textContent ===  questions[currentQuestion].correct){
+      console.log('question')
+    }
+  }
+}
+
 
 //timer function
 function clock() {
   var timerEl = setInterval();
 }
 
-//last page
+//function for end of game
+
+//How do make the highscore page and the game page different
