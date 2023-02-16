@@ -1,22 +1,30 @@
-body{
-    background-color:#deebbd;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #375d35;
+body {
+  background-color: #deebbd;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #375d35;
 }
 
-button{
-    color: #375d35;
+button {
+  color: #375d35;
 }
 
-.quiz{
-    border:#375d35 inset 5px;
-    margin:auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    
+.quiz {
+  border: #375d35 inset 5px;
+  margin: auto;
+  width: 50%;
+  padding: 15px;
+  text-align: center;
 }
 
-.timer{
-    font-size: large;
+.timer {
+  font-size: large;
+}
+
+#end-quiz {
+  border: #375d35 solid 5px;
+  margin: auto;
+  width: 50%;
+  padding: 1px;
+  text-align: center;
 }
