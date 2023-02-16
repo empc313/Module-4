@@ -1,13 +1,4 @@
-//Elements needed
-var submitBtn = document.querySelector("#submit");
-var startBtn = document.querySelector("#start");
-var questionsEl = document.querySelector("#questions");
-var choicesEl = document.querySelector("#choices");
-var initialsEl = document.querySelector("#initials");
-var timerEl = document.querySelector("#time");
-var currentQuestionIndex = 0;
-var time = question.length * 20;
-var timerId;
+
 
 //Quiz Questions
 var questions = [
@@ -27,31 +18,20 @@ var questions = [
   { title: "What", choices: ["1", "2", "3", "4"], answer: "1" },
 ];
 
-//Functions of the quiz
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-function showQuestions(questions, quizContainer){
-var output = [];
-var answer;
-for(var i=0; i<questions.length; i++){
-  answers = [];
-  
-  for (alerts[i].answers) 
-  {answers.push(
-      '<label>'
-        + '<input type="button" name="question'+i+'" value="'+answer+'">'
-        + answer + ': '
-        + questions[i].answers[letter]
-      + '</label>'
-    );
-  }
 
-  function showResults(){
+function showQuestion(q){
+  var titleDiv =document.getElementById('#title');
+  titleDiv.textContent = q.title;
 }
-  showQuestions(questions);
 
-  submitButton.onclick = function(){
-    showResults();
-  };
-}}}
+//Elements needed
+var submitBtn = document.querySelector("#submit");
+var startBtn = document.querySelector("#start");
+var questionsEl = document.querySelector("#questions");
+var choicesEl = document.querySelector("#choices");
+var initialsEl = document.querySelector("#initials");
+var timerEl = document.querySelector("#time");
+var currentQuestionIndex = 0;
+var timerId;
 
 
