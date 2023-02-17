@@ -31,7 +31,7 @@ var initialsEl = document.querySelector("#initials");
 var timerEl = document.querySelector("#time");
 var startPage = document.querySelector("#start-page");
 var endPage = document.querySelector("#end-quiz");
-var hidden= document.querySelector(".hide");
+var hidden = document.querySelector(".hide");
 var currentQuestion = 0;
 var timerId;
 var score = 0;
